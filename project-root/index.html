@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Pickup Buddi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/6638b9f6b8cf4f120c3683b1/d816ffa4-6e17-4e12-86c2-0ce80356e81a/BUDDI+LOGO+HEADER.png" alt="Pickup Buddi Logo" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Employee Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Welcome to Pickup Buddi</h1>
+      <p>Your one-stop resource for flexible student job opportunities.</p>
+      <button onclick="window.location.href='signup.html'">Sign Up Now</button>
+    </div>
+
+    <div class="icons">
+      <div class="icon-container">
+        <img src="https://www.svgrepo.com/show/9862/payment-methods.svg" alt="Payment Info" class="icon" />
+        <p>Payment Info</p>
+      </div>
+      <div class="icon-container">
+        <img src="https://cdn1.iconfinder.com/data/icons/programming-outline-2/64/Process-512.png" alt="Screen Process" class="icon" />
+        <p>Screen Process</p>
+      </div>
+    </div>
+
+    <div class="announcements">
+      <h2>Latest Announcements</h2>
+      <ul id="announcementList" class="collapsed">
+        <li>New payment options available!</li>
+        <li>Check out our new referral program.</li>
+      </ul>
+      <button id="toggleAnnouncementsBtn">Show More</button>
+    </div>
+
+    <div class="theme-toggle">
+      <button id="toggleThemeBtn">Toggle Dark Mode</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pickup Buddi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
