@@ -41,12 +41,12 @@
       </p>
     </form>
 
-    <!-- Theme Toggle Button -->
+   
     <div class="theme-toggle">
       <button id="toggleThemeBtn">Toggle Dark Mode</button>
     </div>
 
-    <!-- Collapsible FAQ Section -->
+
     <div class="faq">
       <h2>Frequently Asked Questions</h2>
       <button class="collapsible">How do I reset my password?</button>
@@ -66,13 +66,12 @@
   </footer>
 
   <script>
-    // Theme Toggle
-    const toggleThemeBtn = document.getElementById('toggleThemeBtn');
+      const toggleThemeBtn = document.getElementById('toggleThemeBtn');
     toggleThemeBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
 
-    // Collapsible FAQ Section
+
     const collapsibles = document.querySelectorAll('.collapsible');
     collapsibles.forEach((collapsible) => {
       collapsible.addEventListener('click', () => {
@@ -81,7 +80,6 @@
       });
     });
 
-    // Input Validation for Login Form
     const form = document.getElementById('loginForm');
     form.addEventListener('submit', (event) => {
       const username = document.getElementById('username').value;

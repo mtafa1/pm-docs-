@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f2f3f5;
@@ -15,7 +15,6 @@ body {
   padding: 0;
 }
 
-/* Header Styles */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -53,7 +52,6 @@ body {
   color: #3d7d3a;
 }
 
-/* Main Container */
 .main-container {
   max-width: 600px;
   margin: 50px auto;
@@ -69,7 +67,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Form Styles */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -116,7 +113,6 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Forgot Password */
 .forgot-password {
   margin-top: 10px;
 }
@@ -149,7 +145,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Collapsible FAQ */
+
 .faq {
   margin-top: 40px;
 }
