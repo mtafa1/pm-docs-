@@ -13,10 +13,10 @@
         <img src="https://images.squarespace-cdn.com/content/v1/6638b9f6b8cf4f120c3683b1/d816ffa4-6e17-4e12-86c2-0ce80356e81a/BUDDI+LOGO+HEADER.png" alt="Pickup Buddi Logo" />
       </div>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Employee Login</a>
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="login.html" class="nav-item">Employee Login</a>
       </div>
     </nav>
   </header>
@@ -48,6 +48,35 @@
       <button id="toggleAnnouncementsBtn">Show More</button>
     </div>
 
+    <!-- 🔹 Employee Sign-Up Section -->
+    <div class="announcements">
+      <h2>Become a Buddi</h2>
+      <form id="signupForm">
+        <p><input type="text" id="name" placeholder="Full Name" required style="padding: 10px; width: 100%; max-width: 400px;"></p>
+        <p><input type="email" id="email" placeholder="Email Address" required style="padding: 10px; width: 100%; max-width: 400px;"></p>
+        <p><input type="text" id="school" placeholder="School Name" required style="padding: 10px; width: 100%; max-width: 400px;"></p>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+
+    <!-- 🔹 FAQ Section -->
+    <div class="announcements">
+      <h2>FAQs</h2>
+      <div>
+        <button class="faq-toggle">What is Pickup Buddi?</button>
+        <p class="collapsed">Pickup Buddi connects students with flexible job opportunities on campus and nearby.</p>
+      </div>
+      <div>
+        <button class="faq-toggle">How do I get paid?</button>
+        <p class="collapsed">Payments are made weekly via direct deposit or Venmo, based on your settings.</p>
+      </div>
+      <div>
+        <button class="faq-toggle">What is the screening process?</button>
+        <p class="collapsed">All applicants complete a short background and ID check to ensure trust and safety.</p>
+      </div>
+    </div>
+
+    <!-- 🔹 Theme Toggle -->
     <div class="theme-toggle">
       <button id="toggleThemeBtn">Toggle Dark Mode</button>
     </div>
@@ -57,6 +86,46 @@
     <p>&copy; 2025 Pickup Buddi</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // 🔹 Dark Mode
+    document.getElementById('toggleThemeBtn').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // 🔹 Show More Announcements
+    document.getElementById('toggleAnnouncementsBtn').addEventListener('click', () => {
+      const list = document.getElementById('announcementList');
+      list.classList.toggle('collapsed');
+      document.getElementById('toggleAnnouncementsBtn').innerText = list.classList.contains('collapsed') ? 'Show More' : 'Show Less';
+    });
+
+    // 🔹 FAQ Toggle
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const next = button.nextElementSibling;
+        next.classList.toggle('collapsed');
+      });
+    });
+
+    // 🔹 Nav Highlight
+    const navItems = document.querySelectorAll('.nav-item');
+    const currentPage = window.location.pathname.split('/').pop();
+    navItems.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.style.color = '#3d7d3a';
+      }
+    });
+
+    // 🔹 Basic Form Validation
+    document.getElementById('signupForm').addEventListener('submit', e => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const school = document.getElementById('school').value.trim();
+      if (!name || !email || !school || !email.includes('@')) {
+        alert('Please fill out all fields with valid information.');
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
